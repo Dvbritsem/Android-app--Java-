@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weer app</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="settings_gps_location">Gebruik GPS locatie</string>
+    <string name="title_activity_settings">Instellingen</string>
+    <string name="location_header">Locatie</string>
+    <string name="temp_title">De huidige temperatuur is:</string>
+    <string name="location_title">Selecteer locatie</string>
+    <string name="current_location">~</string>
+    <string name="no_internet_error">Geen internet verbinding gevonden</string>
+    <string name="last_updated_time">Bijgewerkt om:</string>
+    <string name="no_location_error">Geen GPS locatie gevonden</string>
+</resources>

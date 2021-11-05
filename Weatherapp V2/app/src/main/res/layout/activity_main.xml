@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="339dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="17dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/ic_baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/temp_title"
+        android:layout_width="315dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="62dp"
+        android:text="@string/temp_title"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/current_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="16dp"
+        android:text="~°C"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/current_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_title" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="133dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/temp_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_03d" />
+
+    <ImageView
+        android:id="@+id/location_type"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="187dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/current_location"
+        app:layout_constraintTop_toBottomOf="@+id/Temp"
+        app:srcCompat="@drawable/ic_baseline_location_off_24" />
+
+    <TextView
+        android:id="@+id/current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="1dp"
+        android:text="@string/current_location"
+        app:layout_constraintEnd_toStartOf="@+id/location_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Temp" />
+
+    <TextView
+        android:id="@+id/internet_warning"
+        android:layout_width="399dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="25dp"
+        android:background="#FFCDD2"
+        android:drawableRight="@drawable/ic_baseline_refresh_24"
+        android:onClick="onRefresh"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="@string/no_internet_error"
+        android:textAlignment="textStart"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/weatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location_warning"
+        android:layout_width="399dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="25dp"
+        android:background="#FFCDD2"
+        android:drawableRight="@drawable/ic_baseline_refresh_24"
+        android:onClick="onRefresh"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="@string/no_location_error"
+        android:textAlignment="textStart"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/weatherIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last_updated_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="2dp"
+        android:text="@string/last_updated_time"
+        app:layout_constraintEnd_toStartOf="@+id/refresh_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_type" />
+
+    <ImageView
+        android:id="@+id/refresh_button"
+        android:layout_width="22dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="155dp"
+        android:onClick="onRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/last_updated_time"
+        app:layout_constraintTop_toBottomOf="@id/location_type"
+        app:srcCompat="@drawable/ic_baseline_refresh_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

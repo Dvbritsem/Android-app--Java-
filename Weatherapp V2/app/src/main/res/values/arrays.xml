@@ -1,0 +1,12 @@
+<resources>
+    <!-- Location Preference -->
+    <string-array name="location_entries">
+        <item>Rotterdam</item>
+        <item>Utrecht</item>
+    </string-array>
+
+    <string-array name="location_values">
+        <item>Rotterdam</item>
+        <item>Utrecht</item>
+    </string-array>
+</resources>
